@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MY DJANGO PROJECT</title>
+    <style>
+        table{
+            backcground-color:blue;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>PRODUCTS</h1>
+        <table style="width:450px;background-color:blue; font-family:sans-serif;  border:2px solid white; border-collapse:collapse;">
+            <th style="background-color:orange; color: white;border:2px solid red; border-collapse:collapse;">Product Name</th>
+            <th style="padding:13px;background-color:orange; color: white;border:2px solid red; border-collapse:collapse;">Product Price</th>
+            {% for product in products %}
+            <tr>
+                <td style="padding:10px;background-color:white; color: darkblue;border:2px solid red; border-collapse:collapse;">{{ product.name }}</td>
+                <td style="padding:10px;background-color:white; color: darkblue;border:2px solid red; border-collapse:collapse;">Ksh. {{ product.price }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <div class="card" style="border-radius:5px;background-color:darkorange;
+width:300px;height:200px">
+            <div class="card-body">
+                <h3>Hello There Welcome to this Django Project</h3>
+            </div>
+        </div>
+     </center>
+</body>
+</html>
